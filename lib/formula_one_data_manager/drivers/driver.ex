@@ -33,5 +33,20 @@ defmodule FormulaOneDataManager.Drivers.Driver do
     %__MODULE__{}
     |> cast(attrs, @required_fields)
     |> validate_required(@required_fields)
+    |> validate_length(:name, min: 3, max: 60)
+    |> validate_length(:country, min: 3, max: 60)
+    |> validate_date_of_birth()
+  end
+
+  defp validate_date_of_birth(changeset) do
+    date_of_birth = get_field(changeset, :date_of_birth)
+
+    if driver_over_eighteen?(date_of_birth),
+      do: changeset,
+      else: add_error(changeset, :date_of_birth, "driver should be over 18 years old")
+  end
+
+  defp driver_over_eighteen?(date_of_birth) do
+    Timex.diff(Date.utc_today(), date_of_birth, :years) >= 18
   end
 end
