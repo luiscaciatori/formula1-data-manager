@@ -8,7 +8,7 @@ defmodule FormulaOneDataManager.DriverFixtures do
   alias FormulaOneDataManager.Drivers.Driver
 
   def params_for(:driver, attrs \\ %{}) do
-    blue_print = %{
+    blueprint = %{
       name: Person.name(),
       country: Address.country(),
       date_of_birth: Date.date_of_birth(22..40),
@@ -17,11 +17,11 @@ defmodule FormulaOneDataManager.DriverFixtures do
       race_wins: Enum.random(0..30)
     }
 
-    Map.merge(blue_print, attrs)
+    Map.merge(blueprint, attrs)
   end
 
   def invalid_params_for(:driver, attrs \\ %{}) do
-    blue_print = %{
+    blueprint = %{
       name: nil,
       country: nil,
       date_of_birth: nil,
@@ -30,7 +30,7 @@ defmodule FormulaOneDataManager.DriverFixtures do
       race_wins: nil
     }
 
-    Map.merge(blue_print, attrs)
+    Map.merge(blueprint, attrs)
   end
 
   def build(:driver, attrs \\ %{}) do
