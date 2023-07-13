@@ -64,4 +64,10 @@ defmodule FormulaOneDataManager.DataCase do
       end)
     end)
   end
+
+  def assert_cant_be_blank(changeset, field) do
+    errors = errors_on(changeset)
+
+    assert Map.get(errors, field) == ["can't be blank"]
+  end
 end
