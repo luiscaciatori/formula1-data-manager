@@ -50,6 +50,7 @@ defmodule FormulaOneDataManager.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
+      {:timex, "~> 3.0"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:faker, "~> 0.17.0", only: [:dev, :test]}
     ]
