@@ -8,19 +8,34 @@ defmodule FormulaOneDataManager.DriverFixtures do
   alias FormulaOneDataManager.Drivers.Driver
 
   def params_for(:driver, attrs \\ %{}) do
-    %{
-      name: Person.name,
-      country: Address.country,
+    blue_print = %{
+      name: Person.name(),
+      country: Address.country(),
       date_of_birth: Date.date_of_birth(22..40),
       poles: Enum.random(0..30),
       fastest_laps: Enum.random(0..20),
-      race_wins: Enum.random(0..30),
+      race_wins: Enum.random(0..30)
     }
+
+    Map.merge(blue_print, attrs)
+  end
+
+  def invalid_params_for(:driver, attrs \\ %{}) do
+    blue_print = %{
+      name: nil,
+      country: nil,
+      date_of_birth: nil,
+      poles: nil,
+      fastest_laps: nil,
+      race_wins: nil
+    }
+
+    Map.merge(blue_print, attrs)
   end
 
   def build(:driver, attrs \\ %{}) do
     :driver
-    |> params_for()
+    |> params_for(attrs)
     |> Driver.create_changeset()
     |> Ecto.Changeset.apply_changes()
   end
