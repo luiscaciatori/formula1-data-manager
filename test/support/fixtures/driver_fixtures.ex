@@ -5,6 +5,7 @@ defmodule FormulaOneDataManager.DriverFixtures do
   alias Faker.Address
   alias Faker.Date
   alias Faker.Person
+  alias FormulaOneDataManager.Drivers
   alias FormulaOneDataManager.Drivers.Driver
 
   def params_for(:driver, attrs \\ %{}) do
@@ -39,5 +40,14 @@ defmodule FormulaOneDataManager.DriverFixtures do
     |> params_for(attrs)
     |> Driver.create_changeset()
     |> Ecto.Changeset.apply_changes()
+  end
+
+  def insert(:driver, attrs \\ %{}) do
+    {:ok, %Driver{} = driver} =
+      :driver
+      |> params_for(attrs)
+      |> Drivers.create_driver()
+
+    driver
   end
 end
