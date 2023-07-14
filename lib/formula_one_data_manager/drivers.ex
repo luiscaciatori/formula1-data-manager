@@ -46,4 +46,27 @@ defmodule FormulaOneDataManager.Drivers do
     |> Driver.add_race_win_changeset(attrs)
     |> Repo.update!()
   end
+
+  @doc """
+  Adds a new pole position for driver
+
+  ## Examples
+
+      iex> add_pole_position!(%Driver{})
+      %Driver{}
+
+      iex> add_pole_position!(%Driver{})
+      ** (Ecto.InvalidChangesetError)
+
+      iex> add_pole_position!(%Driver{})
+      ** (Postgrex.Error)
+
+  """
+  def add_pole_position!(%Driver{} = driver) do
+    attrs = %{poles: driver.poles + 1}
+
+    driver
+    |> Driver.add_pole_changeset(attrs)
+    |> Repo.update!()
+  end
 end

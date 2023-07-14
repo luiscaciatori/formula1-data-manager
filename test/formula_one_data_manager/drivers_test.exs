@@ -91,4 +91,14 @@ defmodule FormulaOneDataManager.DriversTest do
       assert %Driver{race_wins: ^expected_race_wins} = Drivers.add_race_win!(driver)
     end
   end
+
+  describe "add_pole_position!/1" do
+    test "increases number of pole position" do
+      %{poles: poles} = driver = insert(:driver)
+
+      expected_poles = poles + 1
+
+      assert %Driver{poles: ^expected_poles} = Drivers.add_pole_position!(driver)
+    end
+  end
 end

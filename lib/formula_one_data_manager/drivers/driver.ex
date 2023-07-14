@@ -49,6 +49,14 @@ defmodule FormulaOneDataManager.Drivers.Driver do
     |> validate_required(fields)
   end
 
+  def add_pole_changeset(%__MODULE__{} = driver, attrs) do
+    fields = [:poles]
+
+    driver
+    |> cast(attrs, fields)
+    |> validate_required(fields)
+  end
+
   defp validate_date_of_birth(changeset) do
     date_of_birth = get_field(changeset, :date_of_birth)
 
