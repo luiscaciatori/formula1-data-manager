@@ -13,6 +13,7 @@ defmodule FormulaOneDataManager.Drivers.Driver do
     fastest_laps
     race_wins
     poles
+    number
   )a
 
   @primary_key {:id, :binary_id, autogenerate: true}
@@ -24,6 +25,7 @@ defmodule FormulaOneDataManager.Drivers.Driver do
     field :fastest_laps, :integer, default: 0
     field :poles, :integer, default: 0
     field :race_wins, :integer, default: 0
+    field :number, :integer
 
     timestamps()
   end
@@ -36,6 +38,7 @@ defmodule FormulaOneDataManager.Drivers.Driver do
     |> validate_length(:name, min: 3, max: 60)
     |> validate_length(:country, min: 3, max: 60)
     |> validate_date_of_birth()
+    |> unique_constraint(:number)
   end
 
   defp validate_date_of_birth(changeset) do

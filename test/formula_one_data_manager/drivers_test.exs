@@ -70,5 +70,14 @@ defmodule FormulaOneDataManager.DriversTest do
       assert {:error, %Ecto.Changeset{} = changeset} = Drivers.create_driver(attrs)
       assert %{date_of_birth: ["driver should be over 18 years old"]} = errors_on(changeset)
     end
+
+    test "returns error when trying to insert the same number twice" do
+      attrs1 = params_for(:driver, %{number: 1})
+      attrs2 = params_for(:driver, %{number: 1})
+
+      assert {:ok, %Driver{}} = Drivers.create_driver(attrs1)
+      assert {:error, %Ecto.Changeset{} = changeset} = Drivers.create_driver(attrs2)
+      assert %{number: ["has already been taken"]} = errors_on(changeset)
+    end
   end
 end

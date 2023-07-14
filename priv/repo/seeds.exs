@@ -25,7 +25,8 @@ drivers = [
     race_wins: 43,
     fastest_laps: 26,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 1
   },
   %{
     name: "Sergio Perez",
@@ -35,7 +36,8 @@ drivers = [
     race_wins: 6,
     fastest_laps: 11,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 11
   },
   %{
     name: "Lewis Hamilton",
@@ -45,7 +47,8 @@ drivers = [
     race_wins: 103,
     fastest_laps: 63,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 44
   },
   %{
     name: "George Russel",
@@ -55,7 +58,8 @@ drivers = [
     race_wins: 1,
     fastest_laps: 6,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 63
   },
   %{
     name: "Fernando Alonso",
@@ -65,7 +69,8 @@ drivers = [
     race_wins: 32,
     fastest_laps: 23,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 14
   },
   %{
     name: "Lance Stroll",
@@ -75,7 +80,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 18
   },
   %{
     name: "Charles Leclec",
@@ -85,7 +91,8 @@ drivers = [
     race_wins: 5,
     fastest_laps: 7,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 16
   },
   %{
     name: "Carlos Sainz",
@@ -95,7 +102,8 @@ drivers = [
     race_wins: 1,
     fastest_laps: 3,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 55
   },
   %{
     name: "Lando Norris",
@@ -105,7 +113,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 5,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 4
   },
   %{
     name: "Oscar Piastri",
@@ -115,7 +124,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 81
   },
   %{
     name: "Esteban Ocon",
@@ -125,7 +135,8 @@ drivers = [
     race_wins: 1,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 31
   },
   %{
     name: "Pierre Gasly",
@@ -135,7 +146,8 @@ drivers = [
     race_wins: 1,
     fastest_laps: 3,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 10
   },
   %{
     name: "Alexander Albon",
@@ -145,7 +157,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 23
   },
   %{
     name: "Logan Sargeant",
@@ -155,7 +168,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 2
   },
   %{
     name: "Nico Hulkenberg",
@@ -165,7 +179,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 2,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 27
   },
   %{
     name: "Kevin Magnussen",
@@ -175,7 +190,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 2,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 20
   },
   %{
     name: "Valtteri Bottas",
@@ -185,7 +201,8 @@ drivers = [
     race_wins: 10,
     fastest_laps: 19,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 77
   },
   %{
     name: "Zhou Guanyu",
@@ -195,7 +212,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 2,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 24
   },
   %{
     name: "Yuki Tsunoda",
@@ -205,7 +223,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 22
   },
   %{
     name: "Nyck De Vries",
@@ -215,7 +234,8 @@ drivers = [
     race_wins: 0,
     fastest_laps: 0,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 21
   },
   %{
     name: "Daniel Ricciardo",
@@ -225,7 +245,8 @@ drivers = [
     race_wins: 8,
     fastest_laps: 16,
     inserted_at: now,
-    updated_at: now
+    updated_at: now,
+    number: 3
   }
 ]
 

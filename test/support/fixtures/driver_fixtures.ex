@@ -14,7 +14,8 @@ defmodule FormulaOneDataManager.DriverFixtures do
       date_of_birth: Date.date_of_birth(22..40),
       poles: Enum.random(0..30),
       fastest_laps: Enum.random(0..20),
-      race_wins: Enum.random(0..30)
+      race_wins: Enum.random(0..30),
+      number: Enum.random(1..99)
     }
 
     Map.merge(blueprint, attrs)
