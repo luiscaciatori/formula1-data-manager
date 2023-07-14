@@ -83,7 +83,7 @@ defmodule FormulaOneDataManager.DriversTest do
   end
 
   describe "add_race_win!/1" do
-    test "increase the number of race wins by 1" do
+    test "increases number of race wins by 1" do
       %{race_wins: race_wins} = driver = insert(:driver)
 
       expected_race_wins = race_wins + 1
