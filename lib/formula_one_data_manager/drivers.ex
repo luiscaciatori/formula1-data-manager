@@ -32,6 +32,12 @@ defmodule FormulaOneDataManager.Drivers do
       iex> add_race_win!(%Driver{})
       %Driver{}
 
+      iex> add_race_win!(%Driver{})
+      ** (Ecto.InvalidChangesetError)
+
+      iex> add_race_win!(%Driver{})
+      ** (Postgrex.Error)
+
   """
   def add_race_win!(%Driver{} = driver) do
     attrs = %{race_wins: driver.race_wins + 1}
