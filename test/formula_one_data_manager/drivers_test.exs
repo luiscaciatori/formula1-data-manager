@@ -17,6 +17,7 @@ defmodule FormulaOneDataManager.DriversTest do
       assert attrs[:poles] == driver.poles
       assert attrs[:fastest_laps] == driver.fastest_laps
       assert attrs[:race_wins] == driver.race_wins
+      assert attrs[:number] == driver.number
     end
 
     test "returns errors with invalid data" do
