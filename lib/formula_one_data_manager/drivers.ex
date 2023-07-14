@@ -23,4 +23,21 @@ defmodule FormulaOneDataManager.Drivers do
     |> Driver.create_changeset()
     |> Repo.insert()
   end
+
+  @doc """
+  Adds a new race win for driver
+
+  ## Examples
+
+      iex> add_race_win!(%Driver{})
+      %Driver{}
+
+  """
+  def add_race_win!(%Driver{} = driver) do
+    attrs = %{race_wins: driver.race_wins + 1}
+
+    driver
+    |> Driver.add_race_win_changeset(attrs)
+    |> Repo.update!()
+  end
 end

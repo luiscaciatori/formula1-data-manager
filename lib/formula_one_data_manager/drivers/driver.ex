@@ -41,6 +41,12 @@ defmodule FormulaOneDataManager.Drivers.Driver do
     |> unique_constraint(:number)
   end
 
+  def add_race_win_changeset(%__MODULE__{} = driver, attrs) do
+    driver
+    |> cast(attrs, [:race_wins])
+    |> validate_required([:race_wins])
+  end
+
   defp validate_date_of_birth(changeset) do
     date_of_birth = get_field(changeset, :date_of_birth)
 

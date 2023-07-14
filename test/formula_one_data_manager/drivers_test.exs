@@ -81,4 +81,14 @@ defmodule FormulaOneDataManager.DriversTest do
       assert %{number: ["has already been taken"]} = errors_on(changeset)
     end
   end
+
+  describe "add_race_win!/1" do
+    test "increase the number of race wins by 1" do
+      %{race_wins: race_wins} = driver = insert(:driver)
+
+      expected_race_wins = race_wins + 1
+
+      assert %Driver{race_wins: ^expected_race_wins} = Drivers.add_race_win!(driver)
+    end
+  end
 end
