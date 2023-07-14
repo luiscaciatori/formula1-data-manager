@@ -44,14 +44,22 @@ defmodule FormulaOneDataManager.Drivers.Driver do
   def add_race_win_changeset(%__MODULE__{} = driver, attrs) do
     fields = [:race_wins]
 
-    driver
-    |> cast(attrs, fields)
-    |> validate_required(fields)
+    update_stats_changeset(driver, fields, attrs)
   end
 
   def add_pole_changeset(%__MODULE__{} = driver, attrs) do
     fields = [:poles]
 
+    update_stats_changeset(driver, fields, attrs)
+  end
+
+  def add_fastest_lap_changeset(%__MODULE__{} = driver, attrs) do
+    fields = [:fastest_laps]
+
+    update_stats_changeset(driver, fields, attrs)
+  end
+
+  defp update_stats_changeset(%__MODULE__{} = driver, fields, attrs) do
     driver
     |> cast(attrs, fields)
     |> validate_required(fields)

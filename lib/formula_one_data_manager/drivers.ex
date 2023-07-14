@@ -69,4 +69,27 @@ defmodule FormulaOneDataManager.Drivers do
     |> Driver.add_pole_changeset(attrs)
     |> Repo.update!()
   end
+
+  @doc """
+  Adds a new fastest lap for driver
+
+  ## Examples
+
+      iex> add_fastest_lap!(%Driver{})
+      %Driver{}
+
+      iex> add_fastest_lap!(%Driver{})
+      ** (Ecto.InvalidChangesetError)
+
+      iex> add_fastest_lap!(%Driver{})
+      ** (Postgrex.Error)
+
+  """
+  def add_fastest_lap!(%Driver{} = driver) do
+    attrs = %{fastest_laps: driver.fastest_laps + 1}
+
+    driver
+    |> Driver.add_fastest_lap_changeset(attrs)
+    |> Repo.update!()
+  end
 end
