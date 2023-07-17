@@ -35,3 +35,6 @@ formula_one_data_manager-*.tar
 npm-debug.log
 /assets/node_modules/
 
+
+/.elixir-tools/
+
