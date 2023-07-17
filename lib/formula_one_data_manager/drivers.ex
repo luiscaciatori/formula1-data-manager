@@ -92,4 +92,20 @@ defmodule FormulaOneDataManager.Drivers do
     |> Driver.add_fastest_lap_changeset(attrs)
     |> Repo.update!()
   end
+
+  @doc """
+  Lists all drivers from database
+
+  ### Examples
+
+      iex> list_all()
+      [%Driver{}, %Driver{}]
+
+      iex> list_all()
+      []
+
+  """
+  def list_all do
+    Repo.all(Driver)
+  end
 end

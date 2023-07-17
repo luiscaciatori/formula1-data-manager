@@ -111,4 +111,12 @@ defmodule FormulaOneDataManager.DriversTest do
       assert %Driver{fastest_laps: ^expected_fastest_laps} = Drivers.add_fastest_lap!(driver)
     end
   end
+
+  describe "list_all/0" do
+    test "returns all available drivers on db" do
+      driver = insert(:driver)
+
+      assert [^driver] = Drivers.list_all()
+    end
+  end
 end
