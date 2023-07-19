@@ -6,8 +6,8 @@ defmodule FormulaOneDataManager.Teams do
     - Search
     - List
   """
-  alias FormulaOneDataManager.Teams.Team
   alias FormulaOneDataManager.Repo
+  alias FormulaOneDataManager.Teams.Team
 
   @doc """
   Creates a new Team

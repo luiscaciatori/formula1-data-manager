@@ -1,4 +1,5 @@
 defmodule FormulaOneDataManager.TeamFixtures do
+  @moduledoc false
   alias Faker.Person
 
   @names ~w(
