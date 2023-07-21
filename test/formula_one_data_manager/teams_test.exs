@@ -43,8 +43,8 @@ defmodule FormulaOneDataManager.TeamsTest do
 
     test "returns error when team principal is inserted twice" do
       team_principal = "Christian Horner"
-      attrs1 = params_for(:team, %{principal: team_principal})
-      attrs2 = params_for(:team, %{principal: team_principal})
+      attrs1 = params_for(:team, %{principal: team_principal, name: "Red Bull Racing"})
+      attrs2 = params_for(:team, %{principal: team_principal, name: "Mercedes F1"})
 
       assert {:ok, %Team{principal: ^team_principal}} = Teams.create_team(attrs1)
       assert {:error, %Ecto.Changeset{} = changeset} = Teams.create_team(attrs2)
