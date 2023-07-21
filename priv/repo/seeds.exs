@@ -16,6 +16,89 @@ alias FormulaOneDataManager.Drivers.Driver
 alias FormulaOneDataManager.Repo
 now = NaiveDateTime.truncate(NaiveDateTime.utc_now(), :second)
 
+teams = [
+  %{
+    name: "Oracle Red Bull Racing",
+    principal: "Christian Horner",
+    poles: 90,
+    race_wins: 102,
+    fastest_lap: 91,
+    championship_wins: 5
+  },
+  %{
+    name: "Mercedes-AMG Petronas F1 Team",
+    principal: "Toto Wolff",
+    poles: 136,
+    race_wins: 125,
+    fastest_lap: 102,
+    championship_wins: 8
+  },
+  %{
+    name: "Aston Martin Aramco Cognizant F1 Team",
+    principal: "Mike Krack",
+    poles: 0,
+    race_wins: 0,
+    fastest_lap: 0,
+    championship_wins: 0
+  },
+  %{
+    name: "Scuderia Ferrari",
+    principal: "Frederic Vasseur",
+    poles: 243,
+    race_wins: 242,
+    fastest_lap: 259,
+    championship_wins: 16
+  },
+  %{
+    name: "Mclaren F1 Team",
+    principal: "Zak Brown",
+    poles: 156,
+    race_wins: 183,
+    fastest_lap: 162,
+    championship_wins: 8
+  },
+  %{
+    name: "BWT Alpine F1 Team",
+    principal: "Otmar Szafnauer",
+    poles: 0,
+    race_wins: 1,
+    fastest_lap: 0,
+    championship_wins: 0
+  },
+  %{
+    name: "Willians Racing",
+    principal: "James Vowles",
+    poles: 128,
+    race_wins: 114,
+    fastest_lap: 133,
+    championship_wins: 9
+  },
+  %{
+    name: "Money Graan Haas F1 Team",
+    principal: "Günther Steiner",
+    poles: 1,
+    race_wins: 0,
+    fastest_lap: 0,
+    championship_wins: 0
+  },
+  %{
+    name: "Alfa Romeo F1 Team Stake",
+    principal: "Alessandro Alunni Bravi",
+    poles: 1,
+    race_wins: 0,
+    fastest_lap: 2,
+    championship_wins: 0
+  },
+  %{
+    name: "Scuderia AlphaTauri",
+    principal: "Franz Tost",
+    poles: 0,
+    race_wins: 1,
+    fastest_lap: 0,
+    championship_wins: 0
+  }
+]
+
 drivers = [
   %{
     name: "Max Verstappen",
