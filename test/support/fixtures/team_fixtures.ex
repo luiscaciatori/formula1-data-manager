@@ -1,6 +1,7 @@
 defmodule FormulaOneDataManager.TeamFixtures do
   @moduledoc false
   alias Faker.Person
+  alias FormulaOneDataManager.Teams
 
   @names [
     "Oracle Red Bull Racing",
@@ -39,6 +40,15 @@ defmodule FormulaOneDataManager.TeamFixtures do
     }
 
     Map.merge(blueprint, attrs)
+  end
+
+  def insert(:team, attrs \\ %{}) do
+    {:ok, team} =
+      :team
+      |> params_for(attrs)
+      |> Teams.create_team()
+
+    team
   end
 
   defp random_number, do: Enum.random(15..150)
